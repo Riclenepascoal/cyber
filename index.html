@@ -140,7 +140,7 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             -webkit-tap-highlight-color: transparent;
-            font-size: 1.05rem; /* ligeiro aumento global */
+            font-size: 1.05rem;
         }
 
         /* ========== FUNDO DECORATIVO ========== */
@@ -639,6 +639,23 @@
             pointer-events: auto;
         }
 
+        /* ========== VÍDEO EMBED ========== */
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 */
+            overflow: hidden;
+            border-radius: var(--radius-md);
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
         /* ========== MEDIA QUERIES ========== */
         @media (max-width: 640px) {
             .glass-card {
@@ -873,7 +890,7 @@
     </div>
 </section>
 
-<!-- Galeria -->
+<!-- Galeria (apenas imagens) -->
 <section id="galeria" class="py-20 sm:py-24 px-4 sm:px-6 max-w-7xl mx-auto reveal">
     <div class="text-center mb-14 sm:mb-16">
         <span class="text-sm text-[var(--brand)] tracking-widest uppercase font-mono font-medium">Galeria</span>
@@ -881,11 +898,11 @@
             Os nossos <span class="bg-gradient-to-r from-[#00e64d] to-[#00cc44] bg-clip-text text-transparent">trabalhos</span>
         </h2>
         <p class="text-[var(--text-secondary)] max-w-xl mx-auto text-base leading-relaxed px-2">
-            Vê alguns dos nossos trabalhos em vídeo e imagem. Qualidade que fala por si.
+            Vê alguns dos nossos trabalhos. Qualidade que fala por si.
         </p>
     </div>
 
-    <!-- Imagens (todas as 16, agora com 3 colunas em desktop para ficarem maiores) -->
+    <!-- Imagens (todas as 16) -->
     <div>
         <h3 class="font-display text-2xl font-semibold mb-6 text-[var(--text-primary)] flex items-center gap-3">
             <svg class="icon w-6 h-6 text-[var(--brand)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2"/><circle cx="8.5" cy="8.5" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
