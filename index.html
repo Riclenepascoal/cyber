@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<html lang="pt" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5.0, user-scalable=yes">
+    <title>15 Impérios | Impressão & Personalização</title>
+    <!-- Ícone circular verde no separador -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%2300e64d'/%3E%3C/svg%3E">
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#e6fff0',
+                            100: '#b3ffcc',
+                            200: '#80ffaa',
+                            300: '#4dff88',
+                            400: '#1aff66',
+                            500: '#00e64d',
+                            600: '#00b33b',
+                            700: '#00802a',
+                            800: '#004d19',
+                            900: '#001a08',
+                        },
+                        surface: {
+                            dark: '#0a0a0f',
+                            'dark-elevated': '#111118',
+                            'dark-card': '#16161f',
+                            light: '#f5f5f7',
+                            'light-elevated': '#ffffff',
+                            'light-card': '#fafafa',
+                        },
+                    },
+                    fontFamily: {
+                        display: ['"Space Grotesk"', 'sans-serif'],
+                        body: ['"Inter"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.7s cubic-bezier(0.23, 1, 0.32, 1) forwards',
+                        'slide-up': 'slideUp 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards',
+                        'slide-in-right': 'slideInRight 0.5s cubic-bezier(0.23, 1, 0.32, 1) forwards',
+                        'scale-in': 'scaleIn 0.5s cubic-bezier(0.23, 1, 0.32, 1) forwards',
+                        'float': 'float 8s ease-in-out infinite',
+                        'float-delayed': 'float 9s ease-in-out 2s infinite',
+                        'float-slow': 'float 12s ease-in-out 4s infinite',
+                        'pulse-soft': 'pulseSoft 3s ease-in-out infinite',
+                        'shimmer': 'shimmer 2s linear infinite',
+                        'rotate-slow': 'rotateSlow 30s linear infinite',
+                        'marquee': 'marquee 30s linear infinite',
+                        'border-glow': 'borderGlow 4s ease-in-out infinite',
+                        'grain': 'grain 8s steps(10) infinite',
+                    },
+                    keyframes: {
+                        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+                        slideUp: { '0%': { opacity: '0', transform: 'translateY(40px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+                        slideInRight: { '0%': { opacity: '0', transform: 'translateX(30px)' }, '100%': { opacity: '1', transform: 'translateX(0)' } },
+                        scaleIn: { '0%': { opacity: '0', transform: 'scale(0.9)' }, '100%': { opacity: '1', transform: 'scale(1)' } },
+                        float: { '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' }, '25%': { transform: 'translateY(-15px) rotate(1deg)' }, '50%': { transform: 'translateY(-5px) rotate(0deg)' }, '75%': { transform: 'translateY(-20px) rotate(-1deg)' } },
+                        pulseSoft: { '0%, 100%': { opacity: '0.6' }, '50%': { opacity: '1' } },
+                        shimmer: { '0%': { backgroundPosition: '-200% 0' }, '100%': { backgroundPosition: '200% 0' } },
+                        rotateSlow: { '0%': { transform: 'rotate(0deg)' }, '100%': { transform: 'rotate(360deg)' } },
+                        marquee: { '0%': { transform: 'translateX(0%)' }, '100%': { transform: 'translateX(-50%)' } },
+                        borderGlow: { '0%, 100%': { borderColor: 'rgba(0,230,77,0.3)' }, '50%': { borderColor: 'rgba(0,230,77,0.8)' } },
+                        grain: { '0%, 100%': { transform: 'translate(0,0)' }, '10%': { transform: 'translate(-5%,-5%)' }, '20%': { transform: 'translate(-10%,5%)' }, '30%': { transform: 'translate(5%,-10%)' }, '40%': { transform: 'translate(-5%,15%)' }, '50%': { transform: 'translate(-10%,5%)' }, '60%': { transform: 'translate(15%,0)' }, '70%': { transform: 'translate(0,10%)' }, '80%': { transform: 'translate(-15%,0)' }, '90%': { transform: 'translate(10%,5%)' } },
+                    },
+                    backgroundImage: {
+                        'grid-pattern': "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
+                        'noise': "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E\")",
+                    },
+                    boxShadow: {
+                        'glow-sm': '0 0 20px rgba(0,230,77,0.15)',
+                        'glow-md': '0 0 40px rgba(0,230,77,0.2)',
+                        'glow-lg': '0 0 80px rgba(0,230,77,0.25)',
+                        'card-dark': '0 1px 3px rgba(0,0,0,0.4), 0 8px 40px rgba(0,0,0,0.5)',
+                        'card-light': '0 1px 3px rgba(0,0,0,0.04), 0 8px 40px rgba(0,0,0,0.06)',
+                        'elevated': '0 4px 24px rgba(0,0,0,0.3)',
+                        'inner-glow': 'inset 0 1px 0 rgba(255,255,255,0.05)',
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+            --bg-base: #0a0a0f;
+            --bg-elevated: #111118;
+            --bg-card: #16161f;
+            --text-primary: #e8e8ed;
+            --text-secondary: #9898a8;
+            --text-tertiary: #606078;
+            --border-subtle: rgba(255, 255, 255, 0.06);
+            --border-medium: rgba(255, 255, 255, 0.1);
+            --border-strong: rgba(0, 230, 77, 0.25);
+            --brand: #00e64d;
+            --brand-glow: rgba(0, 230, 77, 0.3);
+            --radius-sm: 10px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --radius-xl: 32px;
+            --transition-fast: 0.2s cubic-bezier(0.23, 1, 0.32, 1);
+            --transition-smooth: 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            --transition-slow: 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .light {
+            --bg-base: #f5f5f7;
+            --bg-elevated: #ffffff;
+            --bg-card: #fafafa;
+            --text-primary: #1a1a2e;
+            --text-secondary: #5a5a6e;
+            --text-tertiary: #90909e;
+            --border-subtle: rgba(0, 0, 0, 0.05);
+            --border-medium: rgba(0, 0, 0, 0.1);
+            --border-strong: rgba(0, 180, 60, 0.3);
+            --brand: #00b33b;
+            --brand-glow: rgba(0, 180, 60, 0.2);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-base);
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+            transition: background-color var(--transition-smooth), color var(--transition-smooth);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-tap-highlight-color: transparent;
+            font-size: 1.05rem; /* ligeiro aumento global */
+        }
+
+        /* ========== FUNDO DECORATIVO ========== */
+        .bg-ambient {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .bg-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.12;
+            animation: float 20s ease-in-out infinite;
+            will-change: transform;
+        }
+
+        .bg-orb-1 {
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(0, 230, 77, 0.3) 0%, transparent 70%);
+            top: -250px;
+            left: -200px;
+            animation-delay: 0s;
+        }
+
+        .bg-orb-2 {
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0, 230, 77, 0.18) 0%, transparent 70%);
+            bottom: -200px;
+            right: -200px;
+            animation-delay: -7s;
+            animation-duration: 24s;
+        }
+
+        .bg-orb-3 {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0, 200, 60, 0.13) 0%, transparent 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation-delay: -14s;
+            animation-duration: 28s;
+        }
+
+        .light .bg-orb {
+            opacity: 0.05;
+        }
+
+        /* ========== GRID DECORATIVO ========== */
+        .bg-grid {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 1;
+            background-image:
+                linear-gradient(var(--border-subtle) 1px, transparent 1px),
+                linear-gradient(90deg, var(--border-subtle) 1px, transparent 1px);
+            background-size: 60px 60px;
+            mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+            opacity: 0.5;
+        }
+
+        .light .bg-grid {
+            opacity: 0.3;
+        }
+
+        /* ========== RUÍDO ========== */
+        .bg-noise {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 2;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+            animation: grain 8s steps(10) infinite;
+        }
+
+        .light .bg-noise {
+            opacity: 0.015;
+        }
+
+        /* ========== CONTEÚDO ========== */
+        .content-layer {
+            position: relative;
+            z-index: 10;
+        }
+
+        /* ========== GLASS CARD ========== */
+        .glass-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            transition: all var(--transition-smooth);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 8px 32px rgba(0, 0, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            padding: 1px;
+            background: linear-gradient(135deg,
+                    rgba(255, 255, 255, 0.08) 0%,
+                    rgba(255, 255, 255, 0.02) 40%,
+                    rgba(0, 230, 77, 0.06) 60%,
+                    rgba(255, 255, 255, 0.04) 100%);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--border-strong);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4), 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 70px rgba(0, 230, 77, 0.1);
+        }
+
+        .light .glass-card {
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 8px 32px rgba(0, 0, 0, 0.05);
+            background: var(--bg-card);
+        }
+
+        .light .glass-card:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06), 0 20px 50px rgba(0, 0, 0, 0.1), 0 0 50px rgba(0, 180, 60, 0.08);
+        }
+
+        /* ========== BOTÕES ========== */
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #00e64d 0%, #00b33b 100%);
+            color: #000;
+            font-weight: 600;
+            border-radius: 100px;
+            padding: 16px 32px;
+            font-size: 1.05rem;
+            transition: all var(--transition-fast);
+            box-shadow: 0 4px 20px rgba(0, 230, 77, 0.25);
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            letter-spacing: -0.01em;
+            white-space: nowrap;
+            justify-content: center;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 36px rgba(0, 230, 77, 0.45);
+            background: linear-gradient(135deg, #1aff66 0%, #00cc44 100%);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 8px rgba(0, 230, 77, 0.3);
+        }
+
+        .btn-ghost {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: transparent;
+            color: var(--text-primary);
+            font-weight: 500;
+            border-radius: 100px;
+            padding: 15px 30px;
+            font-size: 1.05rem;
+            transition: all var(--transition-fast);
+            border: 1px solid var(--border-medium);
+            cursor: pointer;
+            text-decoration: none;
+            letter-spacing: -0.01em;
+            white-space: nowrap;
+            justify-content: center;
+        }
+
+        .btn-ghost:hover {
+            border-color: var(--brand);
+            background: rgba(0, 230, 77, 0.05);
+            color: var(--brand);
+        }
+
+        /* ========== HEADER ========== */
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(10, 10, 15, 0.7);
+            backdrop-filter: blur(24px) saturate(180%);
+            -webkit-backdrop-filter: blur(24px) saturate(180%);
+            border-bottom: 1px solid var(--border-subtle);
+            transition: all var(--transition-smooth);
+            padding: 0.5rem 0;
+        }
+
+        .light .site-header {
+            background: rgba(245, 245, 247, 0.7);
+            backdrop-filter: blur(24px) saturate(180%);
+            -webkit-backdrop-filter: blur(24px) saturate(180%);
+        }
+
+        .site-header.scrolled {
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), 0 4px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .light .site-header.scrolled {
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 4px 16px rgba(0, 0, 0, 0.06);
+        }
+
+        .logo-text {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            letter-spacing: -0.03em;
+            background: linear-gradient(135deg, #00e64d 0%, #00cc44 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* ========== NAV LINK ========== */
+        .nav-link {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: color var(--transition-fast);
+            position: relative;
+            padding: 6px 0;
+            letter-spacing: -0.01em;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--brand);
+            border-radius: 1px;
+            transform: scaleX(0);
+            transition: transform var(--transition-fast);
+        }
+
+        .nav-link:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-link:hover::after {
+            transform: scaleX(1);
+        }
+
+        /* ========== THEME TOGGLE ========== */
+        .theme-toggle-btn {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 1px solid var(--border-medium);
+            background: var(--bg-card);
+            cursor: pointer;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition-fast);
+            color: var(--text-primary);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+
+        .theme-toggle-btn:hover {
+            border-color: var(--brand);
+            box-shadow: 0 0 28px var(--brand-glow);
+        }
+
+        /* ========== SCROLLBAR ========== */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--border-medium);
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--brand);
+        }
+
+        /* ========== SEÇÃO HERO ========== */
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 230, 77, 0.08);
+            border: 1px solid rgba(0, 230, 77, 0.2);
+            padding: 8px 20px;
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--brand);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .hero-badge-dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: var(--brand);
+            animation: pulseSoft 2s ease-in-out infinite;
+        }
+
+        /* ========== ANIMAÇÕES DE ENTRADA ========== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.23, 1, 0.32, 1),
+                transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-stagger>* {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+                transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .reveal-stagger.visible>*:nth-child(1) { transition-delay: 0s; opacity: 1; transform: translateY(0); }
+        .reveal-stagger.visible>*:nth-child(2) { transition-delay: 0.1s; opacity: 1; transform: translateY(0); }
+        .reveal-stagger.visible>*:nth-child(3) { transition-delay: 0.2s; opacity: 1; transform: translateY(0); }
+        .reveal-stagger.visible>*:nth-child(4) { transition-delay: 0.3s; opacity: 1; transform: translateY(0); }
+        .reveal-stagger.visible>*:nth-child(5) { transition-delay: 0.4s; opacity: 1; transform: translateY(0); }
+        .reveal-stagger.visible>*:nth-child(6) { transition-delay: 0.5s; opacity: 1; transform: translateY(0); }
+        .reveal-stagger.visible>*:nth-child(7) { transition-delay: 0.6s; opacity: 1; transform: translateY(0); }
+        .reveal-stagger.visible>*:nth-child(8) { transition-delay: 0.7s; opacity: 1; transform: translateY(0); }
+        .reveal-stagger.visible>*:nth-child(9) { transition-delay: 0.8s; opacity: 1; transform: translateY(0); }
+        .reveal-stagger.visible>*:nth-child(10) { transition-delay: 0.9s; opacity: 1; transform: translateY(0); }
+        .reveal-stagger.visible>*:nth-child(11) { transition-delay: 1.0s; opacity: 1; transform: translateY(0); }
+        .reveal-stagger.visible>*:nth-child(12) { transition-delay: 1.1s; opacity: 1; transform: translateY(0); }
+        .reveal-stagger.visible>*:nth-child(13) { transition-delay: 1.2s; opacity: 1; transform: translateY(0); }
+        .reveal-stagger.visible>*:nth-child(14) { transition-delay: 1.3s; opacity: 1; transform: translateY(0); }
+        .reveal-stagger.visible>*:nth-child(15) { transition-delay: 1.4s; opacity: 1; transform: translateY(0); }
+        .reveal-stagger.visible>*:nth-child(16) { transition-delay: 1.5s; opacity: 1; transform: translateY(0); }
+
+        /* ========== FAQ ========== */
+        .faq-item {
+            cursor: pointer;
+            user-select: none;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+                padding 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+                opacity 0.4s ease;
+            opacity: 0;
+        }
+        .faq-answer.open {
+            max-height: 500px;
+            padding-top: 16px;
+            opacity: 1;
+        }
+        .faq-arrow {
+            transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+            font-size: 0.9rem;
+            color: var(--text-tertiary);
+        }
+        .faq-arrow.open {
+            transform: rotate(180deg);
+            color: var(--brand);
+        }
+
+        /* ========== MOBILE MENU ========== */
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .mobile-menu.open {
+            max-height: 600px;
+        }
+
+        /* ========== BACK TO TOP ========== */
+        #back-to-top {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        #back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        /* ========== INPUT FOCUS ========== */
+        input:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--brand) !important;
+            box-shadow: 0 0 0 4px rgba(0, 230, 77, 0.12);
+        }
+
+        /* ========== MARQUEE ========== */
+        .marquee-track {
+            display: flex;
+            gap: 2.5rem;
+            animation: marquee 35s linear infinite;
+            white-space: nowrap;
+            font-size: 2rem;
+        }
+        .marquee-track:hover {
+            animation-play-state: paused;
+        }
+
+        /* ========== FULL SCREEN HERO ========== */
+        .fullscreen-hero {
+            min-height: 100vh;
+            min-height: 100svh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* ========== PLACEHOLDER DE MÍDIA ========== */
+        .media-placeholder {
+            background: var(--bg-card);
+            border: 2px dashed var(--border-medium);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 260px;
+            color: var(--text-tertiary);
+            font-size: 1rem;
+            text-align: center;
+            transition: all var(--transition-fast);
+            cursor: default;
+            position: relative;
+            overflow: hidden;
+        }
+        .media-placeholder:hover {
+            border-color: var(--brand);
+            background: rgba(0, 230, 77, 0.03);
+        }
+
+        /* ========== IMAGENS GALERIA ========== */
+        .gallery-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            border-radius: inherit;
+        }
+        .gallery-card {
+            aspect-ratio: 1 / 1;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .gallery-card:hover .gallery-img {
+            transform: scale(1.06);
+        }
+
+        /* ========== LIGHTBOX ========== */
+        #lightbox {
+            transition: opacity 0.3s ease;
+        }
+        #lightbox.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        #lightbox:not(.hidden) {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* ========== MEDIA QUERIES ========== */
+        @media (max-width: 640px) {
+            .glass-card {
+                border-radius: var(--radius-md);
+            }
+            .btn-primary,
+            .btn-ghost {
+                padding: 14px 24px;
+                font-size: 0.95rem;
+            }
+            .hero-badge {
+                font-size: 0.7rem;
+                padding: 6px 14px;
+            }
+            h1 {
+                font-size: 2.5rem !important;
+            }
+            h2 {
+                font-size: 2rem !important;
+            }
+            .media-placeholder {
+                min-height: 200px;
+            }
+            .marquee-track {
+                font-size: 1.5rem;
+            }
+        }
+
+        .icon {
+            width: 1.3em;
+            height: 1.3em;
+            display: inline-block;
+            vertical-align: middle;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body class="font-body antialiased">
+
+    <!-- Fundo decorativo -->
+    <div class="bg-ambient">
+        <div class="bg-orb bg-orb-1"></div>
+        <div class="bg-orb bg-orb-2"></div>
+        <div class="bg-orb bg-orb-3"></div>
+    </div>
+    <div class="bg-grid"></div>
+    <div class="bg-noise"></div>
+
+    <!-- Conteúdo -->
+    <div class="content-layer">
+
+        <!-- Header -->
+        <header class="site-header" id="site-header">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+                <a href="#" class="flex items-center gap-3 no-underline" aria-label="15 Impérios">
+                    <span class="logo-text text-2xl sm:text-3xl">15 Impérios</span>
+                    <span class="hidden sm:inline text-xs text-[var(--text-tertiary)] font-medium tracking-wide">IÀL</span>
+                </a>
+                <nav class="hidden lg:flex items-center gap-8 xl:gap-10">
+                    <a href="#servicos" class="nav-link">Serviços</a>
+                    <a href="#galeria" class="nav-link">Galeria</a>
+                    <a href="#como-funciona" class="nav-link">Processo</a>
+                    <a href="#sobre" class="nav-link">Sobre</a>
+                    <a href="#faq" class="nav-link">FAQ</a>
+                    <a href="#contactos" class="nav-link">Contactos</a>
+                </nav>
+                <div class="flex items-center gap-3 sm:gap-4">
+                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="Alternar tema" title="Alternar tema">
+                        <svg id="theme-icon" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                        </svg>
+                    </button>
+                    <button id="menu-btn" class="lg:hidden text-2xl text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition p-1"
+                    aria-label="Menu" aria-expanded="false">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <line x1="4" x2="20" y1="6" y2="6" /><line x1="4" x2="20" y1="12" y2="12" /><line x1="4" x2="20" y1="18" y2="18" />
+                    </svg>
+                </button>
+                <a href="#contactos" class="btn-primary hidden sm:inline-flex text-base">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    Orçamento
+                </a>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu lg:hidden bg-[var(--bg-elevated)]/95 backdrop-blur-xl border-b border-[var(--border-subtle)]"
+        id="mobile-menu">
+        <nav class="flex flex-col items-center gap-4 py-5 px-6">
+            <a href="#servicos" class="nav-link text-lg py-1">Serviços</a>
+            <a href="#galeria" class="nav-link text-lg py-1">Galeria</a>
+            <a href="#como-funciona" class="nav-link text-lg py-1">Processo</a>
+            <a href="#sobre" class="nav-link text-lg py-1">Sobre</a>
+            <a href="#faq" class="nav-link text-lg py-1">FAQ</a>
+            <a href="#contactos" class="nav-link text-lg py-1">Contactos</a>
+            <a href="#contactos" class="btn-primary text-base mt-2 w-full max-w-[240px]">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                Orçamento Grátis
+            </a>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="fullscreen-hero pt-20 pb-10 px-4 sm:px-6 relative">
+    <div class="text-center max-w-3xl mx-auto w-full reveal">
+        <div class="hero-badge mb-6 sm:mb-8 mx-auto">
+            <span class="hero-badge-dot"></span> Aberto • Seg–Sáb • 8h–18h
+        </div>
+        <h1 class="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 sm:mb-8 leading-[1.1] tracking-tight">
+            Impressão &<br class="sm:hidden">
+            <span class="bg-gradient-to-r from-[#00e64d] via-[#00cc44] to-[#00e64d] bg-clip-text text-transparent">
+                Personalização
+            </span>
+        </h1>
+        <p class="text-lg sm:text-xl text-[var(--text-secondary)] mb-10 sm:mb-12 max-w-2xl mx-auto leading-relaxed font-[350] px-2">
+            O teu cyber de confiança. Imprimimos, copiamos, criamos molduras, camisolas personalizadas,
+            capas de celular e lonas para festas. Tudo com qualidade e rapidez.
+        </p>
+        <div class="flex flex-wrap gap-4 justify-center">
+            <a href="#servicos" class="btn-ghost text-base">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="8 12 12 16 16 12"/><line x1="12" y1="8" x2="12" y2="16"/></svg>
+                Ver serviços
+            </a>
+            <a href="#contactos" class="btn-primary text-base animate-pulse-soft">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                Fazer encomenda
+            </a>
+        </div>
+        <div class="flex flex-wrap justify-center gap-8 sm:gap-10 mt-14 sm:mt-16 text-base">
+            <div class="text-center">
+                <span class="block text-2xl sm:text-3xl font-display font-bold text-[var(--text-primary)]">+1000</span>
+                <span class="text-sm">clientes</span>
+            </div>
+            <div class="text-center">
+                <span class="block text-2xl sm:text-3xl font-display font-bold text-[var(--text-primary)]">24h</span>
+                <span class="text-sm">impressões</span>
+            </div>
+            <div class="text-center">
+                <span class="block text-2xl sm:text-3xl font-display font-bold text-[var(--text-primary)]">100%</span>
+                <span class="text-sm">qualidade</span>
+            </div>
+            <div class="text-center">
+                <span class="block text-2xl sm:text-3xl font-display font-bold text-[var(--text-primary)]">2</span>
+                <span class="text-sm">lojas</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Marquee -->
+<section class="py-8 sm:py-10 overflow-hidden reveal">
+    <p class="text-center text-sm text-[var(--text-tertiary)] tracking-widest uppercase mb-6 font-mono">
+        O que fazemos todos os dias
+    </p>
+    <div class="marquee-track text-2xl sm:text-3xl md:text-4xl text-[var(--text-tertiary)] select-none font-display font-medium opacity-60">
+        <span>Impressão</span> <span>·</span> <span>Cópias</span> <span>·</span> <span>Molduras</span> <span>·</span>
+        <span>Camisolas</span> <span>·</span> <span>Capas de Celular</span> <span>·</span> <span>Lonas</span> <span>·</span>
+        <span>Cartões</span> <span>·</span> <span>Flyers</span> <span>·</span> <span>Banners</span> <span>·</span>
+        <span>Impressão</span> <span>·</span> <span>Cópias</span> <span>·</span> <span>Molduras</span> <span>·</span>
+        <span>Camisolas</span> <span>·</span> <span>Capas de Celular</span> <span>·</span> <span>Lonas</span> <span>·</span>
+        <span>Cartões</span> <span>·</span> <span>Flyers</span> <span>·</span> <span>Banners</span>
+    </div>
+</section>
+
+<!-- Serviços -->
+<section id="servicos" class="py-20 sm:py-24 px-4 sm:px-6 max-w-7xl mx-auto reveal">
+    <div class="text-center mb-14 sm:mb-16">
+        <span class="text-sm text-[var(--brand)] tracking-widest uppercase font-mono font-medium">Os nossos serviços</span>
+        <h2 class="font-display text-3xl sm:text-5xl md:text-6xl font-bold mt-4 mb-5 tracking-tight">
+            Tudo o que <span class="bg-gradient-to-r from-[#00e64d] to-[#00cc44] bg-clip-text text-transparent">fazemos</span>
+        </h2>
+        <p class="text-[var(--text-secondary)] max-w-xl mx-auto text-base leading-relaxed px-2">
+            Serviços completos de impressão e personalização. Preços acessíveis, entrega rápida e qualidade garantida.
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 reveal-stagger">
+        <!-- Impressão -->
+        <div class="glass-card p-8 sm:p-10 group">
+            <div class="mb-6 inline-block group-hover:scale-110 transition-transform duration-300">
+                <svg class="icon w-12 h-12 sm:w-14 sm:h-14 text-[var(--brand)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 12H4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2h-2"/><rect x="6" y="9" width="12" height="8" rx="1"/></svg>
+            </div>
+            <h3 class="font-display font-semibold text-2xl mb-3 text-[var(--text-primary)]">Impressão</h3>
+            <p class="text-[var(--text-secondary)] text-base leading-relaxed mb-5">Documentos, flyers, cartões, banners. Impressão a cores e preto &amp; branco com acabamento profissional.</p>
+            <span class="text-sm font-mono text-[var(--brand)] bg-[var(--brand)]/5 px-4 py-2 rounded-full">Desde 50 Kz</span>
+        </div>
+        <!-- Cópias -->
+        <div class="glass-card p-8 sm:p-10 group">
+            <div class="mb-6 inline-block group-hover:scale-110 transition-transform duration-300">
+                <svg class="icon w-12 h-12 sm:w-14 sm:h-14 text-[var(--brand)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="4" y="10" width="16" height="10" rx="1" opacity="0.4"/></svg>
+            </div>
+            <h3 class="font-display font-semibold text-2xl mb-3 text-[var(--text-primary)]">Copiar Documentos</h3>
+            <p class="text-[var(--text-secondary)] text-base leading-relaxed mb-5">Fotocópias rápidas e de alta qualidade. Digitalização e encadernação disponíveis.</p>
+            <span class="text-sm font-mono text-[var(--brand)] bg-[var(--brand)]/5 px-4 py-2 rounded-full">Desde 30 Kz</span>
+        </div>
+        <!-- Molduras -->
+        <div class="glass-card p-8 sm:p-10 group">
+            <div class="mb-6 inline-block group-hover:scale-110 transition-transform duration-300">
+                <svg class="icon w-12 h-12 sm:w-14 sm:h-14 text-[var(--brand)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><rect x="6" y="6" width="12" height="12" rx="1"/></svg>
+            </div>
+            <h3 class="font-display font-semibold text-2xl mb-3 text-[var(--text-primary)]">Molduras para Fotos</h3>
+            <p class="text-[var(--text-secondary)] text-base leading-relaxed mb-5">Molduras personalizadas para fotografias. Vários tamanhos, estilos e acabamentos disponíveis.</p>
+            <span class="text-sm font-mono text-[var(--brand)] bg-[var(--brand)]/5 px-4 py-2 rounded-full">Desde 2.500 Kz</span>
+        </div>
+        <!-- Camisolas -->
+        <div class="glass-card p-8 sm:p-10 group">
+            <div class="mb-6 inline-block group-hover:scale-110 transition-transform duration-300">
+                <svg class="icon w-12 h-12 sm:w-14 sm:h-14 text-[var(--brand)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 4h12l2 4-3 3-3-2-2 4-2-4-3 2-3-3 2-4z"/><path d="M9 4v2h6V4"/></svg>
+            </div>
+            <h3 class="font-display font-semibold text-2xl mb-3 text-[var(--text-primary)]">Camisolas Personalizadas</h3>
+            <p class="text-[var(--text-secondary)] text-base leading-relaxed mb-5">Estampagem em camisolas com o teu design. Ideal para eventos, equipas e brindes.</p>
+            <span class="text-sm font-mono text-[var(--brand)] bg-[var(--brand)]/5 px-4 py-2 rounded-full">Desde 4.500 Kz</span>
+        </div>
+        <!-- Capas de celular -->
+        <div class="glass-card p-8 sm:p-10 group">
+            <div class="mb-6 inline-block group-hover:scale-110 transition-transform duration-300">
+                <svg class="icon w-12 h-12 sm:w-14 sm:h-14 text-[var(--brand)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/><rect x="6" y="5" width="12" height="14" rx="1" opacity="0.3"/></svg>
+            </div>
+            <h3 class="font-display font-semibold text-2xl mb-3 text-[var(--text-primary)]">Capas de Celular</h3>
+            <p class="text-[var(--text-secondary)] text-base leading-relaxed mb-5">Capas personalizadas com fotos, frases ou designs únicos. Proteção com estilo.</p>
+            <span class="text-sm font-mono text-[var(--brand)] bg-[var(--brand)]/5 px-4 py-2 rounded-full">Desde 3.000 Kz</span>
+        </div>
+        <!-- Lonas para festas -->
+        <div class="glass-card p-8 sm:p-10 group">
+            <div class="mb-6 inline-block group-hover:scale-110 transition-transform duration-300">
+                <svg class="icon w-12 h-12 sm:w-14 sm:h-14 text-[var(--brand)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M6 8h12M6 12h12M6 16h8"/><circle cx="17" cy="16" r="2"/></svg>
+            </div>
+            <h3 class="font-display font-semibold text-2xl mb-3 text-[var(--text-primary)]">Lonas para Festas</h3>
+            <p class="text-[var(--text-secondary)] text-base leading-relaxed mb-5">Lonas impressas em alta resolução para aniversários, casamentos e eventos corporativos.</p>
+            <span class="text-sm font-mono text-[var(--brand)] bg-[var(--brand)]/5 px-4 py-2 rounded-full">Desde 6.000 Kz</span>
+        </div>
+    </div>
+</section>
+
+<!-- Galeria -->
+<section id="galeria" class="py-20 sm:py-24 px-4 sm:px-6 max-w-7xl mx-auto reveal">
+    <div class="text-center mb-14 sm:mb-16">
+        <span class="text-sm text-[var(--brand)] tracking-widest uppercase font-mono font-medium">Galeria</span>
+        <h2 class="font-display text-3xl sm:text-5xl md:text-6xl font-bold mt-4 mb-5 tracking-tight">
+            Os nossos <span class="bg-gradient-to-r from-[#00e64d] to-[#00cc44] bg-clip-text text-transparent">trabalhos</span>
+        </h2>
+        <p class="text-[var(--text-secondary)] max-w-xl mx-auto text-base leading-relaxed px-2">
+            Vê alguns dos nossos trabalhos em vídeo e imagem. Qualidade que fala por si.
+        </p>
+    </div>
+
+    <!-- Vídeos (placeholders maiores) -->
+    <div class="mb-14 sm:mb-16">
+        <h3 class="font-display text-2xl font-semibold mb-6 text-[var(--text-primary)] flex items-center gap-3">
+            <svg class="icon w-6 h-6 text-[var(--brand)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Vídeos
+        </h3>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 reveal-stagger">
+            <div class="media-placeholder glass-card p-6 flex flex-col items-center justify-center" style="min-height:280px;">
+                <svg class="icon w-16 h-16 text-[var(--text-tertiary)] mb-4 opacity-40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                <p class="text-[var(--text-tertiary)] text-base">Vídeo (colar aqui)</p>
+                <p class="text-[var(--text-tertiary)] text-sm mt-1 opacity-60">(ex: YouTube, MP4, etc.)</p>
+            </div>
+            <div class="media-placeholder glass-card p-6 flex flex-col items-center justify-center" style="min-height:280px;">
+                <svg class="icon w-16 h-16 text-[var(--text-tertiary)] mb-4 opacity-40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                <p class="text-[var(--text-tertiary)] text-base">Vídeo (colar aqui)</p>
+                <p class="text-[var(--text-tertiary)] text-sm mt-1 opacity-60">(ex: YouTube, MP4, etc.)</p>
+            </div>
+            <div class="media-placeholder glass-card p-6 flex flex-col items-center justify-center" style="min-height:280px;">
+                <svg class="icon w-16 h-16 text-[var(--text-tertiary)] mb-4 opacity-40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                <p class="text-[var(--text-tertiary)] text-base">Vídeo (colar aqui)</p>
+                <p class="text-[var(--text-tertiary)] text-sm mt-1 opacity-60">(ex: YouTube, MP4, etc.)</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Imagens (todas as 16, agora com 3 colunas em desktop para ficarem maiores) -->
+    <div>
+        <h3 class="font-display text-2xl font-semibold mb-6 text-[var(--text-primary)] flex items-center gap-3">
+            <svg class="icon w-6 h-6 text-[var(--brand)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2"/><circle cx="8.5" cy="8.5" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
+            Imagens
+        </h3>
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-5 sm:gap-6 reveal-stagger">
+            <!-- Imagem 1 -->
+            <div class="glass-card gallery-card">
+                <img src="https://github.com/hunter01-code/cyber/blob/main/IMG-20260611-WA0032%5B1%5D.jpg?raw=true" alt="Trabalho 15 Impérios" class="gallery-img" loading="lazy">
+            </div>
+            <!-- Imagem 2 -->
+            <div class="glass-card gallery-card">
+                <img src="https://github.com/hunter01-code/cyber/blob/main/IMG-20260611-WA0033%5B1%5D.jpg?raw=true" alt="Trabalho 15 Impérios" class="gallery-img" loading="lazy">
+            </div>
+            <!-- Imagem 3 -->
+            <div class="glass-card gallery-card">
+                <img src="https://github.com/hunter01-code/cyber/blob/main/IMG-20260611-WA0029%5B1%5D.jpg?raw=true" alt="Trabalho 15 Impérios" class="gallery-img" loading="lazy">
+            </div>
+            <!-- Imagem 4 -->
+            <div class="glass-card gallery-card">
+                <img src="https://github.com/hunter01-code/cyber/blob/main/IMG-20260611-WA0002%5B1%5D.jpg?raw=true" alt="Trabalho 15 Impérios" class="gallery-img" loading="lazy">
+            </div>
+            <!-- Imagem 5 -->
+            <div class="glass-card gallery-card">
+                <img src="https://github.com/hunter01-code/cyber/blob/main/IMG-20260611-WA0003%5B1%5D.jpg?raw=true" alt="Trabalho 15 Impérios" class="gallery-img" loading="lazy">
+            </div>
+            <!-- Imagem 6 -->
+            <div class="glass-card gallery-card">
+                <img src="https://github.com/hunter01-code/cyber/blob/main/IMG-20260611-WA0004%5B2%5D.jpg?raw=true" alt="Trabalho 15 Impérios" class="gallery-img" loading="lazy">
+            </div>
+            <!-- Imagem 7 -->
+            <div class="glass-card gallery-card">
+                <img src="https://github.com/hunter01-code/cyber/blob/main/IMG-20260611-WA0005%5B1%5D.jpg?raw=true" alt="Trabalho 15 Impérios" class="gallery-img" loading="lazy">
+            </div>
+            <!-- Imagem 8 -->
+            <div class="glass-card gallery-card">
+                <img src="https://github.com/hunter01-code/cyber/blob/main/IMG-20260611-WA0006%5B1%5D.jpg?raw=true" alt="Trabalho 15 Impérios" class="gallery-img" loading="lazy">
+            </div>
+            <!-- Imagem 9 -->
+            <div class="glass-card gallery-card">
+                <img src="https://github.com/hunter01-code/cyber/blob/main/IMG-20260611-WA0007%5B1%5D.jpg?raw=true" alt="Trabalho 15 Impérios" class="gallery-img" loading="lazy">
+            </div>
+            <!-- Imagem 10 -->
+            <div class="glass-card gallery-card">
+                <img src="https://github.com/hunter01-code/cyber/blob/main/IMG-20260611-WA0008%5B1%5D.jpg?raw=true" alt="Trabalho 15 Impérios" class="gallery-img" loading="lazy">
+            </div>
+            <!-- Imagem 11 -->
+            <div class="glass-card gallery-card">
+                <img src="https://github.com/hunter01-code/cyber/blob/main/IMG-20260611-WA0009%5B1%5D.jpg?raw=true" alt="Trabalho 15 Impérios" class="gallery-img" loading="lazy">
+            </div>
+            <!-- Imagem 12 -->
+            <div class="glass-card gallery-card">
+                <img src="https://github.com/hunter01-code/cyber/blob/main/IMG-20260611-WA0010%5B1%5D.jpg?raw=true" alt="Trabalho 15 Impérios" class="gallery-img" loading="lazy">
+            </div>
+            <!-- Imagem 13 -->
+            <div class="glass-card gallery-card">
+                <img src="https://github.com/hunter01-code/cyber/blob/main/IMG-20260611-WA0012%5B1%5D.jpg?raw=true" alt="Trabalho 15 Impérios" class="gallery-img" loading="lazy">
+            </div>
+            <!-- Imagem 14 -->
+            <div class="glass-card gallery-card">
+                <img src="https://github.com/hunter01-code/cyber/blob/main/IMG-20260611-WA0013%5B1%5D.jpg?raw=true" alt="Trabalho 15 Impérios" class="gallery-img" loading="lazy">
+            </div>
+            <!-- Imagem 15 -->
+            <div class="glass-card gallery-card">
+                <img src="https://github.com/hunter01-code/cyber/blob/main/IMG-20260611-WA0016%5B1%5D.jpg?raw=true" alt="Trabalho 15 Impérios" class="gallery-img" loading="lazy">
+            </div>
+            <!-- Imagem 16 -->
+            <div class="glass-card gallery-card">
+                <img src="https://github.com/hunter01-code/cyber/blob/main/IMG-20260611-WA0031%5B1%5D.jpg?raw=true" alt="Trabalho 15 Impérios" class="gallery-img" loading="lazy">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Como funciona -->
+<section id="como-funciona" class="py-20 sm:py-24 px-4 sm:px-6 max-w-6xl mx-auto reveal">
+    <div class="text-center mb-14 sm:mb-16">
+        <span class="text-sm text-[var(--brand)] tracking-widest uppercase font-mono font-medium">Processo simples</span>
+        <h2 class="font-display text-3xl sm:text-5xl md:text-6xl font-bold mt-4 mb-5 tracking-tight">
+            Como <span class="bg-gradient-to-r from-[#00e64d] to-[#00cc44] bg-clip-text text-transparent">funciona</span>
+        </h2>
+        <p class="text-[var(--text-secondary)] max-w-xl mx-auto text-base px-2">Três passos simples para teres os teus produtos personalizados, sem complicações.</p>
+    </div>
+    <div class="grid sm:grid-cols-3 gap-6 sm:gap-8 reveal-stagger">
+        <div class="glass-card p-8 sm:p-10 text-center relative group">
+            <span class="absolute top-4 left-5 text-7xl sm:text-8xl font-display font-bold text-[var(--border-subtle)] group-hover:text-[var(--brand)]/10 transition-colors duration-500 select-none">01</span>
+            <div class="mb-6 relative z-10 inline-block group-hover:animate-float">
+                <svg class="icon w-14 h-14 sm:w-16 sm:h-16 text-[var(--brand)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            </div>
+            <h3 class="font-display font-semibold text-2xl mb-3 relative z-10">Fala connosco</h3>
+            <p class="text-[var(--text-secondary)] text-base relative z-10">Envia mensagem ou visita a loja. Orçamento grátis e sem compromisso.</p>
+        </div>
+        <div class="glass-card p-8 sm:p-10 text-center relative group">
+            <span class="absolute top-4 left-5 text-7xl sm:text-8xl font-display font-bold text-[var(--border-subtle)] group-hover:text-[var(--brand)]/10 transition-colors duration-500 select-none">02</span>
+            <div class="mb-6 relative z-10 inline-block group-hover:animate-float">
+                <svg class="icon w-14 h-14 sm:w-16 sm:h-16 text-[var(--brand)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            </div>
+            <h3 class="font-display font-semibold text-2xl mb-3 relative z-10">Produzimos</h3>
+            <p class="text-[var(--text-secondary)] text-base relative z-10">Criamos o teu pedido com atenção ao detalhe. A maioria fica pronto em 24h.</p>
+        </div>
+        <div class="glass-card p-8 sm:p-10 text-center relative group">
+            <span class="absolute top-4 left-5 text-7xl sm:text-8xl font-display font-bold text-[var(--border-subtle)] group-hover:text-[var(--brand)]/10 transition-colors duration-500 select-none">03</span>
+            <div class="mb-6 relative z-10 inline-block group-hover:animate-float">
+                <svg class="icon w-14 h-14 sm:w-16 sm:h-16 text-[var(--brand)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h3 class="font-display font-semibold text-2xl mb-3 relative z-10">Levanta</h3>
+            <p class="text-[var(--text-secondary)] text-base relative z-10">Recebe o teu produto finalizado. Garantia de satisfação em todos os trabalhos.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Sobre -->
+<section id="sobre" class="py-20 sm:py-24 px-4 sm:px-6 reveal">
+    <div class="max-w-5xl mx-auto glass-card p-8 sm:p-12 md:p-16 text-center">
+        <span class="text-sm text-[var(--brand)] tracking-widest uppercase font-mono font-medium">Quem somos</span>
+        <h2 class="font-display text-3xl sm:text-5xl md:text-6xl font-bold mt-4 mb-6 tracking-tight">
+            O teu cyber <span class="bg-gradient-to-r from-[#00e64d] to-[#00cc44] bg-clip-text text-transparent">de confiança</span>
+        </h2>
+        <p class="text-[var(--text-secondary)] max-w-3xl mx-auto leading-relaxed text-lg">
+            Somos a <strong class="text-[var(--text-primary)]">15 Impérios</strong>, um cyber focado em impressão e personalização.
+            Desde fotocópias a lonas para festas, passando por camisolas e capas de celular personalizadas —
+            fazemos tudo com qualidade, rapidez e preço justo.
+        </p>
+        <div class="flex flex-wrap justify-center gap-10 sm:gap-12 mt-10 sm:mt-12 text-base">
+            <div>
+                <span class="block text-3xl sm:text-4xl font-display font-bold text-[var(--brand)]">+1000</span>
+                <span class="text-[var(--text-tertiary)] text-sm">clientes satisfeitos</span>
+            </div>
+            <div>
+                <span class="block text-3xl sm:text-4xl font-display font-bold text-[var(--brand)]">24h</span>
+                <span class="text-[var(--text-tertiary)] text-sm">entrega rápida</span>
+            </div>
+            <div>
+                <span class="block text-3xl sm:text-4xl font-display font-bold text-[var(--brand)]">100%</span>
+                <span class="text-[var(--text-tertiary)] text-sm">garantia</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="py-20 sm:py-24 px-4 sm:px-6 max-w-4xl mx-auto reveal">
+    <div class="text-center mb-14 sm:mb-16">
+        <span class="text-sm text-[var(--brand)] tracking-widest uppercase font-mono font-medium">Dúvidas</span>
+        <h2 class="font-display text-3xl sm:text-5xl md:text-6xl font-bold mt-4 mb-5 tracking-tight">
+            Perguntas <span class="bg-gradient-to-r from-[#00e64d] to-[#00cc44] bg-clip-text text-transparent">frequentes</span>
+        </h2>
+    </div>
+    <div class="space-y-4">
+        <div class="glass-card p-6 sm:p-7 faq-item">
+            <div class="flex justify-between items-center gap-4">
+                <h3 class="font-display font-semibold text-lg text-[var(--text-primary)]">Quanto tempo demora uma impressão?</h3>
+                <span class="faq-arrow flex-shrink-0">
+                    <svg class="icon w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </span>
+            </div>
+            <div class="faq-answer text-[var(--text-secondary)] text-base leading-relaxed">
+                <p>Impressões simples ficam prontas na hora. Trabalhos maiores (lonas, camisolas) podem levar até 24 horas.</p>
+            </div>
+        </div>
+        <div class="glass-card p-6 sm:p-7 faq-item">
+            <div class="flex justify-between items-center gap-4">
+                <h3 class="font-display font-semibold text-lg text-[var(--text-primary)]">Posso trazer o meu próprio design?</h3>
+                <span class="faq-arrow flex-shrink-0">
+                    <svg class="icon w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </span>
+            </div>
+            <div class="faq-answer text-[var(--text-secondary)] text-base leading-relaxed">
+                <p>Sim! Traz o teu ficheiro em PDF, PNG ou JPG. Se precisares de ajuda com o design, também podemos ajudar.</p>
+            </div>
+        </div>
+        <div class="glass-card p-6 sm:p-7 faq-item">
+            <div class="flex justify-between items-center gap-4">
+                <h3 class="font-display font-semibold text-lg text-[var(--text-primary)]">Quais formas de pagamento?</h3>
+                <span class="faq-arrow flex-shrink-0">
+                    <svg class="icon w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </span>
+            </div>
+            <div class="faq-answer text-[var(--text-secondary)] text-base leading-relaxed">
+                <p>Dinheiro, transferência bancária e pagamentos via app móvel. Aceitamos BFA, BAI e outros.</p>
+            </div>
+        </div>
+        <div class="glass-card p-6 sm:p-7 faq-item">
+            <div class="flex justify-between items-center gap-4">
+                <h3 class="font-display font-semibold text-lg text-[var(--text-primary)]">Onde estão localizados?</h3>
+                <span class="faq-arrow flex-shrink-0">
+                    <svg class="icon w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </span>
+            </div>
+            <div class="faq-answer text-[var(--text-secondary)] text-base leading-relaxed">
+                <p>Estamos no centro de Luanda. Visita-nos ou envia mensagem para saber a localização exata. <em class="text-[var(--brand)]">(O utilizador vai colar a localização posteriormente)</em></p>
+            </div>
+        </div>
+        <div class="glass-card p-6 sm:p-7 faq-item">
+            <div class="flex justify-between items-center gap-4">
+                <h3 class="font-display font-semibold text-lg text-[var(--text-primary)]">Fazem estampagem em qualquer camisola?</h3>
+                <span class="faq-arrow flex-shrink-0">
+                    <svg class="icon w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </span>
+            </div>
+            <div class="faq-answer text-[var(--text-secondary)] text-base leading-relaxed">
+                <p>Sim! Traz a tua camisola ou escolhe entre as nossas. Estampamos em algodão, polyester e misturas.</p>
+            </div>
+        </div>
+        <div class="glass-card p-6 sm:p-7 faq-item">
+            <div class="flex justify-between items-center gap-4">
+                <h3 class="font-display font-semibold text-lg text-[var(--text-primary)]">Fazem capas para todos os modelos?</h3>
+                <span class="faq-arrow flex-shrink-0">
+                    <svg class="icon w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </span>
+            </div>
+            <div class="faq-answer text-[var(--text-secondary)] text-base leading-relaxed">
+                <p>Temos capas para iPhone, Samsung, Xiaomi e Huawei. Se o teu modelo não estiver disponível, encomendamos.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Formulário de orçamento -->
+<section class="py-20 sm:py-24 px-4 sm:px-6 max-w-3xl mx-auto reveal">
+    <div class="glass-card p-8 sm:p-10 md:p-14">
+        <div class="text-center mb-8 sm:mb-10">
+            <span class="text-sm text-[var(--brand)] tracking-widest uppercase font-mono font-medium">Mensagem rápida</span>
+            <h2 class="font-display text-3xl sm:text-4xl font-bold mt-3 tracking-tight">
+                Pedir <span class="bg-gradient-to-r from-[#00e64d] to-[#00cc44] bg-clip-text text-transparent">orçamento</span>
+            </h2>
+        </div>
+        <form class="space-y-5" onsubmit="event.preventDefault(); alert('Mensagem simulada! Isto seria enviado para o WhatsApp da 15 Impérios.');">
+            <input type="text" placeholder="O teu nome" class="w-full bg-transparent border border-[var(--border-medium)] rounded-xl px-5 py-4 text-[var(--text-primary)] placeholder-[var(--text-tertiary)] text-base transition" required>
+            <input type="tel" placeholder="Número de telefone" class="w-full bg-transparent border border-[var(--border-medium)] rounded-xl px-5 py-4 text-[var(--text-primary)] placeholder-[var(--text-tertiary)] text-base transition" required>
+            <select class="w-full bg-[var(--bg-card)] border border-[var(--border-medium)] rounded-xl px-5 py-4 text-[var(--text-primary)] text-base transition" required>
+                <option value="" disabled selected class="text-[var(--text-tertiary)]">Tipo de serviço</option>
+                <option value="impressao">Impressão</option>
+                <option value="copias">Copiar Documentos</option>
+                <option value="molduras">Molduras para Fotos</option>
+                <option value="camisolas">Camisolas Personalizadas</option>
+                <option value="capas">Capas de Celular</option>
+                <option value="lonas">Lonas para Festas</option>
+                <option value="outro">Outro</option>
+            </select>
+            <textarea rows="4" placeholder="Descreve o que precisas (opcional)" class="w-full bg-transparent border border-[var(--border-medium)] rounded-xl px-5 py-4 text-[var(--text-primary)] placeholder-[var(--text-tertiary)] text-base transition resize-none"></textarea>
+            <button type="submit" class="btn-primary w-full justify-center text-lg py-4">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                Enviar pedido
+            </button>
+        </form>
+    </div>
+</section>
+
+<!-- Contactos -->
+<section id="contactos" class="py-20 sm:py-24 px-4 sm:px-6 reveal">
+    <div class="max-w-5xl mx-auto text-center">
+        <span class="text-sm text-[var(--brand)] tracking-widest uppercase font-mono font-medium">Fala connosco</span>
+        <h2 class="font-display text-3xl sm:text-5xl md:text-6xl font-bold mt-4 mb-10 tracking-tight">
+            Atendimento <span class="bg-gradient-to-r from-[#00e64d] to-[#00cc44] bg-clip-text text-transparent">rápido</span>
+        </h2>
+        <div class="flex flex-wrap justify-center gap-6 sm:gap-8 reveal-stagger">
+            <div class="glass-card p-7 sm:p-9 w-full sm:w-80 text-center">
+                <svg class="icon w-14 h-14 mx-auto mb-5 text-[var(--brand)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                <h3 class="font-display font-semibold text-2xl mb-4">WhatsApp</h3>
+                <div class="flex flex-col gap-3">
+                    <a href="https://wa.me/244929234249?text=Olá%2C+quero+saber+mais+sobre+os+serviços+da+15+Impérios"
+                    class="btn-primary text-base w-full justify-center">
+                    929 234 249
+                </a>
+                <a href="https://wa.me/244927196846?text=Olá%2C+quero+saber+mais+sobre+os+serviços+da+15+Impérios"
+                class="btn-primary text-base w-full justify-center">
+                927 196 846
+            </a>
+        </div>
+    </div>
+    <div class="glass-card p-7 sm:p-9 w-full sm:w-72 text-center">
+        <svg class="icon w-14 h-14 mx-auto mb-5 text-[var(--brand)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <h3 class="font-display font-semibold text-2xl mb-2">Onde estamos</h3>
+        <p class="text-[var(--text-secondary)] text-sm leading-relaxed">
+            <em class="text-[var(--text-tertiary)]">[Colar localização aqui]</em><br>
+            Luanda, Angola
+        </p>
+        <a href="https://maps.google.com" target="_blank" rel="noopener"
+        class="text-[var(--brand)] text-sm mt-3 inline-block hover:underline">Abrir no Maps →</a>
+    </div>
+    <div class="glass-card p-7 sm:p-9 w-full sm:w-80 text-center">
+        <svg class="icon w-14 h-14 mx-auto mb-5 text-[var(--brand)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        <h3 class="font-display font-semibold text-2xl mb-4">Redes sociais</h3>
+        <div class="flex flex-col items-center gap-4 mt-2">
+            <a href="https://facebook.com/15imperiosial" target="_blank" rel="noopener" class="flex items-center gap-3 text-base font-medium text-[var(--text-primary)] hover:text-[var(--brand)] transition">
+                <svg class="icon w-6 h-6 text-blue-500" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                <span>Facebook: 15 Impérios IÀL</span>
+            </a>
+            <a href="https://tiktok.com/@15imperiosal" target="_blank" rel="noopener" class="flex items-center gap-3 text-base font-medium text-[var(--text-primary)] hover:text-[var(--brand)] transition">
+                <svg class="icon w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+                <span>TikTok: 15 Impérios ÀL</span>
+            </a>
+            <a href="https://instagram.com/15imperios" target="_blank" rel="noopener" class="flex items-center gap-3 text-base font-medium text-[var(--text-primary)] hover:text-[var(--brand)] transition">
+                <svg class="icon w-6 h-6 text-pink-500" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="white"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="white" stroke-width="2"/></svg>
+                <span>Instagram: @15imperios</span>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="text-center mt-10">
+    <span class="inline-block glass-card px-5 py-3 text-sm text-[var(--text-secondary)]">
+        <svg class="icon w-5 h-5 inline-block mr-2 text-[var(--brand)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <strong class="text-[var(--text-primary)]">Horário:</strong> Segunda a Sábado • 8h às 18h • Domingo: fechado
+    </span>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="py-10 sm:py-12 text-center text-sm text-[var(--text-tertiary)] border-t border-[var(--border-subtle)] px-4">
+    <p>© 2026 <span class="text-[var(--brand)] font-semibold">15 Impérios</span> — Impressão & Personalização.</p>
+    <p class="mt-2">Feito com profissionalismo pela equipa 15 Impérios.</p>
+    <p class="mt-3 opacity-50 italic">~ Do papel ao tecido, a tua ideia ganha vida ~</p>
+    <div class="mt-5 flex justify-center gap-6">
+        <a href="#" class="hover:text-[var(--brand)] transition">Privacidade</a>
+        <a href="#" class="hover:text-[var(--brand)] transition">Termos</a>
+    </div>
+</footer>
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" class="fixed inset-0 z-[300] hidden flex items-center justify-center bg-black/90 backdrop-blur-sm transition-opacity duration-300" aria-hidden="true">
+    <button id="lightbox-close" class="absolute top-5 right-5 sm:top-8 sm:right-8 text-white/70 hover:text-white text-4xl leading-none p-3 z-10" aria-label="Fechar">
+        &times;
+    </button>
+    <img id="lightbox-img" src="" alt="" class="max-w-full max-h-full object-contain p-6 sm:p-10" />
+</div>
+
+<!-- Botão voltar ao topo -->
+<button id="back-to-top"
+class="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-[200] w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[var(--bg-card)] border border-[var(--border-medium)] text-[var(--text-primary)] flex items-center justify-center shadow-lg hover:border-[var(--brand)] hover:shadow-[0_0_28px_var(--brand-glow)] transition-all cursor-pointer"
+aria-label="Voltar ao topo" title="Voltar ao topo">
+<svg class="icon w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script>
+    (function() {
+        const htmlElement = document.documentElement;
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const backToTopBtn = document.getElementById('back-to-top');
+        const header = document.getElementById('site-header');
+
+        // ========== TEMA ==========
+        const savedTheme = localStorage.getItem('theme');
+        function setTheme(isDark) {
+            if (isDark) {
+                htmlElement.classList.add('dark');
+                htmlElement.classList.remove('light');
+                themeIcon.innerHTML = `<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>`;
+                localStorage.setItem('theme', 'dark');
+            } else {
+                htmlElement.classList.remove('dark');
+                htmlElement.classList.add('light');
+                themeIcon.innerHTML = `<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>`;
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        const prefersDark = savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        setTheme(prefersDark);
+
+        themeToggle.addEventListener('click', () => {
+            const isDark = htmlElement.classList.contains('dark');
+            setTheme(!isDark);
+        });
+
+        // ========== MENU MOBILE ==========
+        menuBtn.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.toggle('open');
+            menuBtn.innerHTML = isOpen ?
+                `<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>` :
+                `<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="4" x2="20" y1="6" y2="6" /><line x1="4" x2="20" y1="12" y2="12" /><line x1="4" x2="20" y1="18" y2="18" /></svg>`;
+            menuBtn.setAttribute('aria-expanded', isOpen);
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+                menuBtn.innerHTML = `<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="4" x2="20" y1="6" y2="6" /><line x1="4" x2="20" y1="12" y2="12" /><line x1="4" x2="20" y1="18" y2="18" /></svg>`;
+                menuBtn.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // ========== FAQ ACCORDION ==========
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const answer = item.querySelector('.faq-answer');
+                const arrow = item.querySelector('.faq-arrow');
+                const isOpen = answer.classList.contains('open');
+
+                document.querySelectorAll('.faq-answer.open').forEach(openAnswer => {
+                    if (openAnswer !== answer) {
+                        openAnswer.classList.remove('open');
+                        openAnswer.parentElement.querySelector('.faq-arrow')
+                            .classList.remove('open');
+                    }
+                });
+
+                if (!isOpen) {
+                    answer.classList.add('open');
+                    arrow.classList.add('open');
+                } else {
+                    answer.classList.remove('open');
+                    arrow.classList.remove('open');
+                }
+            });
+        });
+
+        // ========== SCROLL: HEADER SHADOW ==========
+        window.addEventListener('scroll', () => {
+            const scrolled = window.scrollY > 20;
+            header.classList.toggle('scrolled', scrolled);
+
+            if (window.scrollY > 600) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+
+        // ========== BACK TO TOP ==========
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // ========== REVELAÇÃO AO SCROLL ==========
+        const revealElements = document.querySelectorAll('.reveal');
+        const staggerElements = document.querySelectorAll('.reveal-stagger');
+
+        function checkReveal() {
+            const windowHeight = window.innerHeight;
+            const revealPoint = 80;
+
+            revealElements.forEach(el => {
+                const top = el.getBoundingClientRect().top;
+                if (top < windowHeight - revealPoint) {
+                    el.classList.add('visible');
+                }
+            });
+
+            staggerElements.forEach(el => {
+                const top = el.getBoundingClientRect().top;
+                if (top < windowHeight - revealPoint) {
+                    el.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkReveal, { passive: true });
+        window.addEventListener('load', checkReveal);
+        checkReveal();
+
+        // ========== SCROLL SUAVE PARA LINKS INTERNOS ==========
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
+                const target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+                    const headerHeight = header.offsetHeight + 16;
+                    const targetPosition = target.getBoundingClientRect().top + window
+                        .scrollY - headerHeight;
+                    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // ========== LIGHTBOX ==========
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.getElementById('lightbox-close');
+
+        function openLightbox(imgSrc, imgAlt) {
+            lightboxImg.src = imgSrc;
+            lightboxImg.alt = imgAlt || '';
+            lightbox.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.add('hidden');
+            document.body.style.overflow = '';
+            lightboxImg.src = '';
+        }
+
+        document.querySelectorAll('.gallery-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const img = card.querySelector('img');
+                if (img) {
+                    openLightbox(img.src, img.alt);
+                }
+            });
+        });
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
+                closeLightbox();
+            }
+        });
+
+        console.log(
+            '%c 15 Impérios %c Impressão & Personalização ',
+            'background:#0a0a0f;color:#00e64d;padding:6px 12px;font-weight:bold;border-radius:8px;font-family:"Space Grotesk",sans-serif;font-size:14px;',
+            'color:#9898a8;font-family:"Inter",sans-serif;'
+        );
+    })();
+</script>
+</body>
+</html>
